@@ -28,6 +28,7 @@ export const getProjects = () => async (dispatch) => {
 export const getProject = (id, navigate) => async (dispatch) => {
   try {
     const res = await axios.get(`/api/project/${id}`);
+    console.log("actions");
     dispatch({
       type: GET_PROJECT,
       payload: res.data,
