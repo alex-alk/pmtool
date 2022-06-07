@@ -19,17 +19,18 @@ public class User implements UserDetails {
     private Long id;
 
     @Email(message = "Username needs to be an email")
-    @NotBlank(message = "username is required")
+    @NotBlank(message = "Username is required")
     @Column(unique = true)
     private String username;
 
     @NotBlank(message = "Please enter your full name")
     private String fullName;
+
     @NotBlank(message = "Password field is required")
     private String password;
 
     @Transient
-    private String confirmedPassword;
+    private String confirmPassword;
     private Date createdAt;
     private Date updatedAt;
 
@@ -112,12 +113,12 @@ public class User implements UserDetails {
         this.password = password;
     }
 
-    public String getConfirmedPassword() {
-        return confirmedPassword;
+    public String getConfirmPassword() {
+        return confirmPassword;
     }
 
-    public void setConfirmedPassword(String confirmedPassword) {
-        this.confirmedPassword = confirmedPassword;
+    public void setConfirmPassword(String confirmedPassword) {
+        this.confirmPassword = confirmedPassword;
     }
 
     public Date getCreatedAt() {
