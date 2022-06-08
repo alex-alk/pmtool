@@ -1,3 +1,1 @@
-#How to set up front-end
-> npm run build
-- copy content in resources/static
+copy application_public.properties as application.properties
