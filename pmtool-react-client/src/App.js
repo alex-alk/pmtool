@@ -53,27 +53,61 @@ function App() {
             {
               // private routes
             }
-            <SecureRoute exact path="/dashboard" element={<Dashboard />} />
-            <SecureRoute exact path="/addProject" element={<AddProject />} />
-            <SecureRoute
+
+            <Route
+              exact
+              path="/dashboard"
+              element={
+                <SecureRoute>
+                  <Dashboard />
+                </SecureRoute>
+              }
+            />
+
+            <Route
+              exact
+              path="/addProject"
+              element={
+                <SecureRoute>
+                  <AddProject />
+                </SecureRoute>
+              }
+            />
+            <Route
               exact
               path="/updateProject/:id"
-              element={<UpdateProject />}
+              element={
+                <SecureRoute>
+                  <UpdateProject />
+                </SecureRoute>
+              }
             />
-            <SecureRoute
+            <Route
               exact
               path="/projectBoard/:id"
-              element={<ProjectBoard />}
+              element={
+                <SecureRoute>
+                  <ProjectBoard />
+                </SecureRoute>
+              }
             />
-            <SecureRoute
+            <Route
               exact
               path="/addProjectTask/:id"
-              element={<AddProjectTask />}
+              element={
+                <SecureRoute>
+                  <AddProjectTask />
+                </SecureRoute>
+              }
             />
-            <SecureRoute
+            <Route
               exact
               path="/updateProjectTask/:backlog_id/:pt_id"
-              element={<UpdateProjectTask />}
+              element={
+                <SecureRoute>
+                  <UpdateProjectTask />
+                </SecureRoute>
+              }
             />
           </Routes>
         </BrowserRouter>

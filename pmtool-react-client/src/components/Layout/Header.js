@@ -15,7 +15,7 @@ class Header extends Component {
       <div className="collapse navbar-collapse" id="mobile-nav">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/dashboard">
+            <Link className="nav-link text-light" to="/dashboard">
               Dashboard
             </Link>
           </li>
@@ -23,13 +23,13 @@ class Header extends Component {
 
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link className="nav-link " to="/dashboard">
-              <i className="fas fa-user-circle mr-1"></i> {user.fullName}
+            <Link className="nav-link text-light" to="/dashboard">
+              <i className="fas fa-user-circle mr-1"></i> {user.fullname}
             </Link>
           </li>
           <li className="nav-item">
             <Link
-              className="nav-link"
+              className="nav-link text-light"
               to="/logout"
               onClick={this.logout.bind(this)}
             >
@@ -44,12 +44,12 @@ class Header extends Component {
       <div className="collapse navbar-collapse" id="mobile-nav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link className="nav-link " to="/register">
+            <Link className="nav-link text-white" to="/register">
               Sign Up
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/login">
+            <Link className="nav-link text-white" to="/login">
               Login
             </Link>
           </li>
@@ -66,7 +66,7 @@ class Header extends Component {
     }
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
         <div className="container">
           <Link className="navbar-brand" to="/">
             Project Management Tool

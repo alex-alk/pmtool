@@ -48,8 +48,7 @@ class UpdateProject extends Component {
 
   componentDidMount() {
     const { id } = this.props.params;
-    console.log("did mount");
-    this.props.getProject(id, this.props.history);
+    this.props.getProject(id, this.props.navigate);
   }
 
   onChange(e) {
@@ -68,11 +67,10 @@ class UpdateProject extends Component {
       end_date: this.state.end_date,
     };
 
-    this.props.createProject(updateProject, this.props.history);
+    this.props.createProject(updateProject, this.props.navigate);
   }
 
   render() {
-    console.log("render");
     const { errors } = this.state;
     return (
       <div className="project">

@@ -24,25 +24,32 @@ class ProjectItem extends Component {
             </div>
             <div className="col-md-4 d-none d-lg-block">
               <ul className="list-group">
-                <Link to={`/projectBoard/${project.projectIdentifier}`}>
-                  <li className="list-group-item board">
-                    <i className="fa fa-flag-checkered pr-1"> Project Board </i>
+                <Link
+                  to={`/projectBoard/${project.projectIdentifier}`}
+                  className="text-decoration-none"
+                >
+                  <li className="list-group-item board ">
+                    <i className="fa fa-flag-checkered pr-1"></i> Project Board
                   </li>
                 </Link>
-                <Link to={`/updateProject/${project.projectIdentifier}`}>
-                  <li className="list-group-item update">
-                    <i className="fa fa-edit pr-1"> Update Project Info</i>
+                <Link
+                  to={`/updateProject/${project.projectIdentifier}`}
+                  className="text-decoration-none"
+                >
+                  <li className="list-group-item update text-success">
+                    <i className="fa fa-edit pr-1 text-success"></i> Update
+                    Project Info
                   </li>
                 </Link>
 
                 <li
-                  className="list-group-item delete"
+                  className="list-group-item delete text-danger"
                   onClick={this.onDeleteClick.bind(
                     this,
                     project.projectIdentifier
                   )}
                 >
-                  <i className="fa fa-minus-circle pr-1"> Delete Project</i>
+                  <i className="fa fa-minus-circle pr-1"></i> Delete Project
                 </li>
               </ul>
             </div>

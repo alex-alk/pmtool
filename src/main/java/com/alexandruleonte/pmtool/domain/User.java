@@ -34,7 +34,7 @@ public class User implements UserDetails {
     private Date createdAt;
     private Date updatedAt;
 
-    @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "user", orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
     private List<Project> projects = new ArrayList<>();
 
     public User() {
@@ -62,6 +62,9 @@ public class User implements UserDetails {
     public String getUsername() {
         return username;
     }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     @Override
     @JsonIgnore
@@ -85,10 +88,6 @@ public class User implements UserDetails {
     @JsonIgnore
     public boolean isEnabled() {
         return true;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getFullName() {

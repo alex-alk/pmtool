@@ -39,6 +39,12 @@ class ProjectBoard extends Component {
               {errors.projectNotFound}
             </div>
           );
+        } else if (errors.projectIdentifier) {
+          return (
+            <div className="alert alert-danger text-center" role="alert">
+              {errors.projectIdentifier}
+            </div>
+          );
         } else {
           return (
             <div className="alert alert-info text-center" role="alert">
@@ -56,7 +62,7 @@ class ProjectBoard extends Component {
     return (
       <div className="container">
         <Link to={`/addProjectTask/${id}`} className="btn btn-primary mb-3">
-          <i className="fas fa-plus-circle"> Create Project Task</i>
+          <i className="fas fa-plus-circle"></i> Create Project Task
         </Link>
         <br />
         <hr />
