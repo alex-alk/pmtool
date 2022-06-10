@@ -1,2 +1,4 @@
 # PM Tool API
-copy application_public.properties as application.properties
+API: https://github.com/alex-alk/pmtool-react-client
+
+On deployment: copy application_public.properties as application.properties
